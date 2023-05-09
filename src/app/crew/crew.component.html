@@ -1,4 +1,4 @@
 <h3>Crew</h3>
 <ul>
-  <li *ngFor="let member of crew">{{member.name}}</li>
+  <li *ngFor="let member of crew">{{member.name}} <span *ngIf="member.firstMission">- 1st</span></li>
 </ul>
