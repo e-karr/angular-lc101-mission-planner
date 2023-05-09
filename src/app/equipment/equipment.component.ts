@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EquipmentComponent implements OnInit {
 
   equipment: string[] = ['Habitat dome', 'Drones', 'Food containers', 'Oxygen tanks'];
+  itemBeingEdited: string = "";
 
   constructor() { }
 
@@ -31,6 +32,16 @@ export class EquipmentComponent implements OnInit {
   remove(item: string) {
     let index = this.equipment.indexOf(item);
     this.equipment.splice(index, 1);
+  }
+
+  edit(item: string) {
+    this.itemBeingEdited = item;
+  }
+
+  save(newItem: string, item: string) {
+    let index: number = this.equipment.indexOf(item);
+    this.equipment[index] = newItem
+    this.itemBeingEdited = "";
   }
 
 }
