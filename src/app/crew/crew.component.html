@@ -5,4 +5,4 @@
 
 <input #name type="text">
 <label for="">First Mission <input #firstMission type="checkbox"></label>
-<button (click)="add(name.value, firstMission.checked)">Add</button>
+<button (click)="add(name.value, firstMission.checked); name.value = ''">Add</button>
