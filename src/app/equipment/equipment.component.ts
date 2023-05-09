@@ -28,4 +28,9 @@ export class EquipmentComponent implements OnInit {
     return addMessage;
   }
 
+  remove(item: string) {
+    let index = this.equipment.indexOf(item);
+    this.equipment.splice(index, 1);
+  }
+
 }
