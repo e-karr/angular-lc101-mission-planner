@@ -22,4 +22,9 @@ export class CrewComponent implements OnInit {
     this.crew.push({name: name, firstMission: firstMission});
   }
 
+  remove(member: object) {
+    let index = this.crew.indexOf(member);
+    this.crew.splice(index, 1);
+  }
+
 }
