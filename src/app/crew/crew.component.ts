@@ -20,7 +20,17 @@ export class CrewComponent implements OnInit {
   }
 
   add(name: string, firstMission: boolean) {
-    this.crew.push({name: name, firstMission: firstMission});
+    let addMessage: string = "";
+
+    if (this.crew.some(member => member["name"] === name)) {
+      addMessage = "This member is already in your crew";
+    } else if (name === "") {
+      addMessage = "Please enter a name";
+    } else {
+      this.crew.push({name: name, firstMission: firstMission});
+    }
+    
+    return addMessage;
   }
 
   remove(member: object) {
