@@ -27,4 +27,9 @@ export class ExperimentsComponent implements OnInit {
     return addMessage;
   }
 
+  remove(experiment: string) {
+    let index = this.experiments.indexOf(experiment);
+    this.experiments.splice(index, 1);
+  }
+
 }

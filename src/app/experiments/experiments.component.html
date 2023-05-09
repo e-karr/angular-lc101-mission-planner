@@ -2,6 +2,7 @@
 <ul>
   <li *ngFor="let experiment of experiments">
     {{experiment}}
+    <button (click)="remove(experiment)">remove</button>
   </li>
 </ul>
 
