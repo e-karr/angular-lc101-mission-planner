@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperimentsComponent implements OnInit {
   experiments: string[] = ['Mars soil sample', 'Plant growth in habitat', 'Human bone density'];
+  experimentBeingEdited: string = "";
 
   constructor() { }
 
@@ -30,6 +31,16 @@ export class ExperimentsComponent implements OnInit {
   remove(experiment: string) {
     let index = this.experiments.indexOf(experiment);
     this.experiments.splice(index, 1);
+  }
+
+  edit(experiment: string) {
+    this.experimentBeingEdited = experiment;
+  }
+
+  save(updatedExperiment: string, experiment: string) {
+    let index = this.experiments.indexOf(experiment);
+    this.experiments[index] = updatedExperiment;
+    this.experimentBeingEdited = "";
   }
 
 }

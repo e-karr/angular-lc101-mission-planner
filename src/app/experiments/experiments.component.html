@@ -1,8 +1,15 @@
 <h3>Experiments</h3>
 <ul>
   <li *ngFor="let experiment of experiments">
-    {{experiment}}
-    <button (click)="remove(experiment)">remove</button>
+    <span *ngIf="experimentBeingEdited !== experiment; else elseBlock">
+      <span (click)="edit(experiment)" class="editable-text">{{experiment}}</span>
+      <button (click)="remove(experiment)">remove</button>
+    </span>
+
+    <ng-template #elseBlock>
+      <input #updatedExperiment type="text" value="{{experiment}}" (keyup.enter)="save(updatedExperiment.value, experiment)">
+      <button (click)="save(updatedExperiment.value, experiment)">save</button>
+    </ng-template>
   </li>
 </ul>
 
