@@ -1,7 +1,10 @@
 <h3>Equipment</h3>
 <ul>
-  <li>Habitat dome</li>
-  <li>Drones</li>
-  <li>Food containers</li>
-  <li>Oxygen tanks</li>
+  <li *ngFor="let item of equipment">
+    {{item}}
+  </li>
 </ul>
+
+<input #item type="text" (keyup.enter)="message = add(item.value); item.value = ''">
+<button (click)="message = add(item.value); item.value = ''">Add</button>
+<p *ngIf="message">{{message}}</p>
