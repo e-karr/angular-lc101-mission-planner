@@ -2,17 +2,30 @@
 <ul>
   <li *ngFor="let experiment of experiments">
     <span *ngIf="experimentBeingEdited !== experiment; else elseBlock">
-      <span (click)="edit(experiment)" class="editable-text">{{experiment}}</span>
+      <span (click)="edit(experiment)" class="editable-text">{{
+        experiment
+      }}</span>
       <button (click)="remove(experiment)">remove</button>
     </span>
 
     <ng-template #elseBlock>
-      <input #updatedExperiment type="text" value="{{experiment}}" (keyup.enter)="save(updatedExperiment.value, experiment)">
+      <input
+        #updatedExperiment
+        type="text"
+        value="{{ experiment }}"
+        (keyup.enter)="save(updatedExperiment.value, experiment)"
+      />
       <button (click)="save(updatedExperiment.value, experiment)">save</button>
     </ng-template>
   </li>
 </ul>
 
-<input #newExperiment type="text" (keyup.enter)="message = add(newExperiment.value); newExperiment.value = ''">
-<button (click)="message = add(newExperiment.value); newExperiment.value = ''">Add</button>
-<p *ngIf="message">{{message}}</p>
+<input
+  #newExperiment
+  type="text"
+  (keyup.enter)="message = add(newExperiment.value); newExperiment.value = ''"
+/>
+<button (click)="message = add(newExperiment.value); newExperiment.value = ''">
+  Add
+</button>
+<p *ngIf="message">{{ message }}</p>

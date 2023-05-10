@@ -2,17 +2,26 @@
 <ul>
   <li *ngFor="let item of equipment">
     <span *ngIf="itemBeingEdited !== item; else elseBlock">
-      <span (click)="edit(item)" class="editable-text">{{item}} </span>
+      <span (click)="edit(item)" class="editable-text">{{ item }} </span>
       <button (click)="remove(item)">remove</button>
     </span>
 
     <ng-template #elseBlock>
-      <input #updatedItem (keyup.enter)="save(updatedItem.value, item)" value="{{item}}" type="text">
+      <input
+        #updatedItem
+        (keyup.enter)="save(updatedItem.value, item)"
+        value="{{ item }}"
+        type="text"
+      />
       <button (click)="save(updatedItem.value, item)">save</button>
     </ng-template>
   </li>
 </ul>
 
-<input #item type="text" (keyup.enter)="message = add(item.value); item.value = ''">
+<input
+  #item
+  type="text"
+  (keyup.enter)="message = add(item.value); item.value = ''"
+/>
 <button (click)="message = add(item.value); item.value = ''">Add</button>
-<p *ngIf="message">{{message}}</p>
+<p *ngIf="message">{{ message }}</p>
