@@ -5,7 +5,7 @@
       <span (click)="edit(experiment)" class="editable-text">{{
         experiment
       }}</span>
-      <button (click)="remove(experiment)">remove</button>
+      <button class="remove" (click)="remove(experiment)">remove</button>
     </span>
 
     <ng-template #elseBlock>
@@ -15,7 +15,9 @@
         value="{{ experiment }}"
         (keyup.enter)="save(updatedExperiment.value, experiment)"
       />
-      <button (click)="save(updatedExperiment.value, experiment)">save</button>
+      <button class="save" (click)="save(updatedExperiment.value, experiment)">
+        save
+      </button>
     </ng-template>
   </li>
 </ul>
@@ -25,7 +27,10 @@
   type="text"
   (keyup.enter)="message = add(newExperiment.value); newExperiment.value = ''"
 />
-<button (click)="message = add(newExperiment.value); newExperiment.value = ''">
+<button
+  class="add"
+  (click)="message = add(newExperiment.value); newExperiment.value = ''"
+>
   Add
 </button>
 <p *ngIf="message">{{ message }}</p>

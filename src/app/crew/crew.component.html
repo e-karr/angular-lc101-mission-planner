@@ -6,7 +6,7 @@
         >{{ member.name }}
       </span>
       <span *ngIf="member.firstMission">- 1st</span>
-      <button (click)="remove(member)">remove</button>
+      <button class="remove" (click)="remove(member)">remove</button>
     </span>
 
     <ng-template #elseBlock>
@@ -16,7 +16,9 @@
         value="{{ member.name }}"
         type="text"
       />
-      <button (click)="save(updatedName.value, member)">save</button>
+      <button class="save" (click)="save(updatedName.value, member)">
+        save
+      </button>
     </ng-template>
   </li>
 </ul>
@@ -30,6 +32,7 @@
 />
 <label for="">First Mission <input #firstMission type="checkbox" /></label>
 <button
+  class="add"
   (click)="message = add(name.value, firstMission.checked); name.value = ''"
 >
   Add

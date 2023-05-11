@@ -1,4 +1,22 @@
 .box {
-    display: flex;
-    padding: 10px;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+app-crew,
+app-equipment {
+  border-right: 1px dashed darkblue;
+  padding-right: 5px;
+}
+
+app-equipment,
+app-experiments {
+    padding-left: 5px;
 }

@@ -1,3 +1,7 @@
 p {
     color: red;
 }
+
+label {
+    padding-left: 5px;
+}

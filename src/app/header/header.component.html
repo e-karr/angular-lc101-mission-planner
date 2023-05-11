@@ -13,7 +13,7 @@
       (keyup.enter)="updateMission(mission.value)"
       value="{{ missionName }}"
     />
-    <button (click)="updateMission(mission.value)">save</button>
+    <button class="save" (click)="updateMission(mission.value)">save</button>
   </ng-template>
 </h3>
 
@@ -31,6 +31,6 @@
       (keyup.enter)="updateRocket(rocket.value)"
       value="{{ rocketName }}"
     />
-    <button (click)="updateRocket(rocket.value)">save</button>
+    <button class="save" (click)="updateRocket(rocket.value)">save</button>
   </ng-template>
 </h3>

@@ -1,4 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 .editable-text {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(196, 213, 255);
+}
+
+li {
+  line-height: 1.5;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding-left: 3px;
+}
+
+.remove,
+.add,
+.save {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.save {
+  background-color: blue;
+}
+
+.remove {
+  background-color: red;
+}
+
+.add {
+  background-color: green;
 }

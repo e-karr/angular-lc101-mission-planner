@@ -1,1 +1,7 @@
-
+:host {
+    display: block;
+    background-color: rgba(137, 43, 226, 0.781);
+    padding: 10px;
+    color: white;
+    box-shadow: 0 0 3rem black;
+}
