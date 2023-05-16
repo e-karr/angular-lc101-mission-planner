@@ -55,11 +55,9 @@ export class CrewComponent implements OnInit {
   addCrewMember(candidate: object) {
     if (!this.crew.includes(candidate) && this.crew.length < 3) {
       this.crew.push(candidate);
-      console.log(`${candidate['name']} added to crew`);
     } else if (this.crew.includes(candidate)) {
       let index = this.crew.indexOf(candidate);
       this.crew.splice(index, 1);
-      console.log(`${candidate['name']} removed from crew`);
     }
   }
 }
