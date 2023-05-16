@@ -22,7 +22,7 @@
 <h3>Selected Experiments: {{ selectedExperiments.length }}/3 Spots Filled</h3>
 <ol>
   <li *ngFor="let experiment of selectedExperiments">
-    {{ experiment }}<button class="remove">Remove</button>
+    {{ experiment }}<button class="remove" (click)="removeExperiment(experiment)">Remove</button>
   </li>
 </ol>
 <button

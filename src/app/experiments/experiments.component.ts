@@ -29,6 +29,11 @@ export class ExperimentsComponent implements OnInit {
     }
   }
 
+  removeExperiment(experiment: string) {
+    let index = this.selectedExperiments.indexOf(experiment);
+    this.selectedExperiments.splice(index, 1);
+  }
+
   unselectAll() {
     this.selectedExperiments.splice(0);
   }
