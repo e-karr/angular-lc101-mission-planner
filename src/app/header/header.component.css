@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap');
+
+:host {
+  display: block;
+  background-color: darkgrey;
+
+  padding: 20px 0;
+
+  border-bottom: 5px solid black;
+  font-family: 'Chau Philomene One', sans-serif;
+}
+
 .editable-text {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 h2 {
-    text-align: center;
-    color: brown;
+  text-align: center;
+  color: rgb(255, 253, 236);
 }
 
 h1 {
-    text-align: center;
-    text-decoration: underline;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(20, 11, 174);
 }
