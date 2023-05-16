@@ -15,36 +15,50 @@ export class CrewComponent implements OnInit {
       name: 'Sally Ride',
       photo:
         'https://handlers.education.launchcode.org/static/images/sally-ride.jpg',
+      faveAnimal: 'Dog',
+      nickname: 'Sal',
     },
     {
       name: 'Mae Jemison',
       photo:
         'https://handlers.education.launchcode.org/static/images/mae-jemison.jpg',
+      faveAnimal: 'Cat',
+      nickname: 'Jemi',
     },
     {
       name: 'Ellen Ochoa',
       photo:
         'https://handlers.education.launchcode.org/static/images/ellen-ochoa.jpg',
+      faveAnimal: 'Horse',
+      nickname: 'Ellie',
     },
     {
       name: 'Frederick Gregory',
       photo:
         'https://handlers.education.launchcode.org/static/images/frederick-gregory.jpg',
+      faveAnimal: 'Lizard',
+      nickname: 'Freddy',
     },
     {
       name: 'Guion Bluford',
       photo:
         'https://handlers.education.launchcode.org/static/images/guion-bluford.jpg',
+      faveAnimal: 'Tiger',
+      nickname: 'Blue',
     },
     {
       name: 'Kjell Lindgren',
       photo:
         'https://handlers.education.launchcode.org/static/images/kjell-lindgren.jpg',
+      faveAnimal: 'Cow',
+      nickname: 'Lin',
     },
     {
       name: 'Jeanette Epps',
       photo:
         'https://handlers.education.launchcode.org/static/images/jeanette-epps.jpg',
+      faveAnimal: 'Rabbit',
+      nickname: 'Jean',
     },
   ];
 

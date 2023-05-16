@@ -28,9 +28,9 @@
     </li>
   </ol>
   <!-- Add an img tag here to display astronaut photos. -->
-  <img
-    *ngIf="mouseoverCrewMember"
-    src="{{ mouseoverCrewMember.photo }}"
-    alt=""
-  />
+  <div class="crewInfo" *ngIf="mouseoverCrewMember">
+    <img src="{{ mouseoverCrewMember.photo }}" alt="" />
+    <p>Favorite Animal: {{ mouseoverCrewMember.faveAnimal }}</p>
+    <p>Nickname: {{ mouseoverCrewMember.nickname }}</p>
+  </div>
 </div>

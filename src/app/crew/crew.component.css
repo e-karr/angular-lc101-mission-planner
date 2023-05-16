@@ -43,3 +43,7 @@ h3 {
 .crew:hover {
   color: rgb(13, 132, 90);
 }
+
+.crewInfo {
+  text-align: center;
+}
