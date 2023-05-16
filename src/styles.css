@@ -8,3 +8,32 @@ body {
 hr {
   border-color: black;
 }
+
+button {
+  margin: 2px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: white;
+}
+
+li {
+  line-height: 2;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.displayBox {
+  width: auto;
+}
+
+.remove {
+  background-color: rgb(255, 123, 0);
+}

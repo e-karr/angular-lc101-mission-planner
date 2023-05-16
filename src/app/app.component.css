@@ -11,4 +11,10 @@ app-equipment,
 app-experiments {
   font-family: 'Gantari', sans-serif;
   width: 33%;
+  padding: 0 1rem;
+}
+
+app-crew,
+app-equipment {
+  border-right: 3px dashed black;
 }
