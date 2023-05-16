@@ -12,13 +12,14 @@
 </div>
 <hr />
 <div class="displayBox">
-  <h3>
+  <h3 [class.full]="crew.length === 3">
     Crew
     <!-- Add a span tag here to display 'Full' when the crew reaches 3. -->
     <span *ngIf="crew.length === 3"> Full</span>
   </h3>
   <ol>
     <li
+      class="crew"
       *ngFor="let astronaut of crew"
       (mouseover)="mouseoverCrewMember = astronaut"
       (mouseout)="mouseoverCrewMember = null"

@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari&display=swap');
+
 .box {
-    display: flex;
-    padding: 10px;
-    justify-content: space-evenly;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+app-crew,
+app-equipment,
+app-experiments {
+  font-family: 'Gantari', sans-serif;
 }

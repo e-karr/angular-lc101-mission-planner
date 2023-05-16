@@ -1,9 +1,14 @@
+:host {
+  display: block;
+  border-right: 3px dashed black;
+  padding-right: 4rem;
+}
+
 li:hover {
   cursor: pointer;
 }
 
 .displayBox {
-  height: 275px;
   width: auto;
 }
 
@@ -13,13 +18,27 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border: 2px dotted black;
 }
 
 h3 {
   text-align: center;
 }
 
+hr {
+  border-color: black;
+}
+
 /* Add a 'selected' class here to style selected astronaut names a different color. */
 .selected {
   color: magenta;
+  font-weight: 700;
+}
+
+.full {
+  color: red;
+}
+
+.crew:hover {
+  color: rgb(13, 132, 90);
 }
