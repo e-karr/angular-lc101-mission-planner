@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CrewComponent implements OnInit {
   inCrew: boolean = false;
   crew: object[] = [];
+  mouseoverCrewMember: object = null;
 
   candidates: object[] = [
     {
