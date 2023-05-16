@@ -23,7 +23,7 @@ export class ExperimentsComponent implements OnInit {
   selectExperiment(experiment: string) {
     if (
       !this.selectedExperiments.includes(experiment) &&
-      this.selectedExperiments.length < 2
+      this.selectedExperiments.length < 3
     ) {
       this.selectedExperiments.push(experiment);
     }
