@@ -37,4 +37,9 @@ export class EquipmentComponent implements OnInit {
 
     return false;
   }
+
+  emptyHold() {
+    this.cargoMass = 0;
+    this.cargoHold.splice(0);
+  }
 }
