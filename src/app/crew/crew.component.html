@@ -17,6 +17,7 @@
     <!-- Add a span tag here to display 'Full' when the crew reaches 3. -->
     <span *ngIf="crew.length === 3"> Full</span>
   </h3>
+
   <ol>
     <li
       class="crew"
@@ -27,6 +28,7 @@
       {{ astronaut.name }}
     </li>
   </ol>
+
   <!-- Add an img tag here to display astronaut photos. -->
   <div class="crewInfo" *ngIf="mouseoverCrewMember">
     <img src="{{ mouseoverCrewMember.photo }}" alt="" />

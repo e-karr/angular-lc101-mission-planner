@@ -25,10 +25,12 @@
     {{ experiment }}<button class="remove" (click)="removeExperiment(experiment)">Remove</button>
   </li>
 </ol>
-<button
-  *ngIf="selectedExperiments.length > 0"
-  class="clearAll"
-  (click)="unselectAll()"
->
-  Unselect All
-</button>
+<div class="clearButton">
+  <button
+    *ngIf="selectedExperiments.length > 0"
+    class="clearAll"
+    (click)="unselectAll()"
+  >
+    Unselect All
+  </button>
+</div>

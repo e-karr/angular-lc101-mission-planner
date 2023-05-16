@@ -33,10 +33,12 @@
       }}<button class="remove" (click)="removeItem(equipment)">Remove</button>
     </li>
   </ol>
-  <p>Mass in Hold: {{ cargoMass }} kg</p>
-  <p [class.nearMaxMass]="cargoMass >= maximumAllowedMass - 200">
-    Mass Budget Remaining: {{ maximumAllowedMass - cargoMass }} kg
-  </p>
-  <!-- Add the "Empty Hold" button here. -->
-  <button class="empty" (click)="emptyHold()">Empty Hold</button>
+  <div class="center">
+    <p>Mass in Hold: {{ cargoMass }} kg</p>
+    <p [class.nearMaxMass]="cargoMass >= maximumAllowedMass - 200">
+      Mass Budget Remaining: {{ maximumAllowedMass - cargoMass }} kg
+    </p>
+    <!-- Add the "Empty Hold" button here. -->
+    <button *ngIf="cargoHold.length > 0" class="empty" (click)="emptyHold()">Empty Hold</button>
+  </div>
 </div>

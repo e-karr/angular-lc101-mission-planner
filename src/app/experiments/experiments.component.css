@@ -37,3 +37,7 @@ button {
 .clearAll {
   background-color: darkred;
 }
+
+.clearButton {
+  text-align: center;
+}

@@ -45,3 +45,7 @@ li {
   font-weight: 700;
   color: red;
 }
+
+.center {
+  text-align: center;
+}
