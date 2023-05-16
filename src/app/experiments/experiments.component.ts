@@ -28,4 +28,8 @@ export class ExperimentsComponent implements OnInit {
       this.selectedExperiments.push(experiment);
     }
   }
+
+  unselectAll() {
+    this.selectedExperiments.splice(0);
+  }
 }

@@ -8,7 +8,10 @@
           !selectedExperiments.includes(experiment) &&
           selectedExperiments.length < 2
         "
-        [disabled]="selectedExperiments.includes(experiment) || selectedExperiments.length >= 2"
+        [disabled]="
+          selectedExperiments.includes(experiment) ||
+          selectedExperiments.length >= 2
+        "
       >
         Select Experiment</button
       >{{ experiment }}
@@ -22,6 +25,10 @@
     {{ experiment }}<button class="remove">Remove</button>
   </li>
 </ol>
-<button *ngIf="selectedExperiments.length > 0" class="clearAll">
+<button
+  *ngIf="selectedExperiments.length > 0"
+  class="clearAll"
+  (click)="unselectAll()"
+>
   Unselect All
 </button>
