@@ -1,20 +1,43 @@
+:host {
+  display: block;
+  border-right: 3px dashed black;
+  padding: 0 4rem;
+}
+
 .displayBox {
-  height: 275px;
   width: auto;
 }
 
 button {
   margin: 2px;
   cursor: pointer;
+  font-size: .85rem;
 }
 
 h3 {
   text-align: center;
+  font-size: 1.25rem;
+}
+
+li {
+  line-height: 2;
 }
 
 /* Add an 'active' class to style the background of the 'Add to Cargo Hold' buttons. */
 .active {
-  background-color: lightgreen;
+  background-color: rgb(6, 74, 6);
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: white;
+}
+
+.empty {
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: white;
+  background-color: darkred;
 }
 
 /* Add the 'nearMaxMass' class style here: */

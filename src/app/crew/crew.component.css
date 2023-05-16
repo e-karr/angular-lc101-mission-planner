@@ -4,6 +4,10 @@
   padding-right: 4rem;
 }
 
+li {
+  line-height: 2;
+}
+
 li:hover {
   cursor: pointer;
 }
@@ -23,10 +27,7 @@ img {
 
 h3 {
   text-align: center;
-}
-
-hr {
-  border-color: black;
+  font-size: 1.25rem;
 }
 
 /* Add a 'selected' class here to style selected astronaut names a different color. */
