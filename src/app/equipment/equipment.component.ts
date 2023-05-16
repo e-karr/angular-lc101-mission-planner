@@ -28,14 +28,29 @@ export class EquipmentComponent implements OnInit {
 
   // Code your addItem function here:
   addItem(equipment: object) {
-    this.cargoHold.push(equipment);
-    this.cargoMass += equipment['mass'];
+    let counter: number = this.countItems(equipment);
+
+    if (counter < 2) {
+      this.cargoHold.push(equipment);
+      this.cargoMass += equipment['mass'];
+    }
 
     if (this.cargoMass >= this.maximumAllowedMass - 200) {
       return true;
     }
 
     return false;
+  }
+
+  countItems(equipment: object): number {
+    let counter: number = 0;
+    for (let item of this.cargoHold) {
+      if (item === equipment) {
+        counter++;
+      }
+    }
+
+    return counter;
   }
 
   emptyHold() {

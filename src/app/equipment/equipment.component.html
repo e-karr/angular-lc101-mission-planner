@@ -4,11 +4,16 @@
     <li *ngFor="let item of equipmentItems">
       <!-- "Add to Cargo Hold" button goes here. -->
       <button
-        [class.active]="cargoMass + item.mass <= maximumAllowedMass && cargoHold.length !== maxItems"
+        [class.active]="
+          cargoMass + item.mass <= maximumAllowedMass &&
+          cargoHold.length !== maxItems &&
+          countItems(item) < 2
+        "
         (click)="addItem(item)"
         [disabled]="
           cargoHold.length === maxItems ||
-          cargoMass + item.mass > maximumAllowedMass
+          cargoMass + item.mass > maximumAllowedMass ||
+          countItems(item) >= 2
         "
       >
         Add to Cargo Hold
