@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Candidate {
+  name: string;
+  photo: string;
+  faveAnimal: string;
+  nickname: string;
+}
+
 @Component({
   selector: 'app-crew',
   templateUrl: './crew.component.html',
@@ -7,10 +14,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrewComponent implements OnInit {
   inCrew: boolean = false;
-  crew: object[] = [];
-  mouseoverCrewMember: object = null;
+  crew: Candidate[] = [];
+  mouseoverCrewMember: Candidate = null;
 
-  candidates: object[] = [
+  candidates: Candidate[] = [
     {
       name: 'Sally Ride',
       photo:
@@ -67,7 +74,7 @@ export class CrewComponent implements OnInit {
   ngOnInit() {}
 
   // Code the 'addCrewMember' function here:
-  addCrewMember(candidate: object) {
+  addCrewMember(candidate: Candidate) {
     if (!this.crew.includes(candidate) && this.crew.length < 3) {
       this.crew.push(candidate);
     } else if (this.crew.includes(candidate)) {
