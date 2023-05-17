@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface equipment {
+interface Equipment {
   name: string;
   mass: number;
 }
@@ -11,7 +11,7 @@ interface equipment {
   styleUrls: ['./equipment.component.css'],
 })
 export class EquipmentComponent implements OnInit {
-  equipmentItems: equipment[] = [
+  equipmentItems: Equipment[] = [
     { name: 'Duct Tape', mass: 0.5 },
     { name: 'Space Camera', mass: 20 },
     { name: 'Food', mass: 150 },
@@ -22,7 +22,7 @@ export class EquipmentComponent implements OnInit {
     { name: 'Satellite', mass: 1200 },
     { name: 'R2 Unit', mass: 32 },
   ];
-  cargoHold: equipment[] = [];
+  cargoHold: Equipment[] = [];
   cargoMass: number = 0;
   maximumAllowedMass: number = 2000;
   maxItems: number = 10;
@@ -32,7 +32,7 @@ export class EquipmentComponent implements OnInit {
   ngOnInit() {}
 
   // Code your addItem function here:
-  addItem(equipment: equipment) {
+  addItem(equipment: Equipment) {
     let counter: number = this.countItems(equipment);
 
     if (counter < 2) {
@@ -40,14 +40,10 @@ export class EquipmentComponent implements OnInit {
       this.cargoMass += equipment.mass;
     }
 
-    if (this.cargoMass >= this.maximumAllowedMass - 200) {
-      return true;
-    }
-
-    return false;
+    return this.cargoMass >= this.maximumAllowedMass - 200;
   }
 
-  countItems(equipment: equipment): number {
+  countItems(equipment: Equipment): number {
     let counter: number = 0;
     for (let item of this.cargoHold) {
       if (item === equipment) {
@@ -58,7 +54,7 @@ export class EquipmentComponent implements OnInit {
     return counter;
   }
 
-  removeItem(item: equipment) {
+  removeItem(item: Equipment) {
     let index = this.cargoHold.indexOf(item);
     this.cargoMass -= item.mass;
     this.cargoHold.splice(index, 1);
