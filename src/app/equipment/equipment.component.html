@@ -9,7 +9,7 @@
           cargoHold.length !== maxItems &&
           countItems(item) < 2
         "
-        (click)="addItem(item)"
+        (click)="nearCapacity = addItem(item)"
         [disabled]="
           cargoHold.length === maxItems ||
           cargoMass + item.mass > maximumAllowedMass ||
@@ -35,10 +35,10 @@
   </ol>
   <div class="center">
     <p>Mass in Hold: {{ cargoMass }} kg</p>
-    <p [class.nearMaxMass]="cargoMass >= maximumAllowedMass - 200">
+    <p [class.nearMaxMass]="nearCapacity">
       Mass Budget Remaining: {{ maximumAllowedMass - cargoMass }} kg
     </p>
     <!-- Add the "Empty Hold" button here. -->
-    <button *ngIf="cargoHold.length > 0" class="empty" (click)="emptyHold()">Empty Hold</button>
+    <button *ngIf="cargoHold.length > 0" class="empty" (click)="emptyHold(); nearCapacity = false">Empty Hold</button>
   </div>
 </div>
